@@ -1,6 +1,6 @@
 # 🛫 Beladeplan: welche ULDs, welche Position?
 
-*(noch nicht deployed)*
+**[→ Demo live ausprobieren](https://sebastianhanisch-uld-beladeplan-demo.streamlit.app/)**
 
 Zweites Stück der Packen-Ausbaulinie, eigenständig neben [`uld-gewicht-demo`](https://github.com/sebastian-hanisch/uld-gewicht-demo)
 (dort: Volumen-Packung **eines** ULD gegen dessen eigenen Schwerpunkt) und geschärft gegenüber
