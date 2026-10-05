@@ -68,8 +68,8 @@ Fenster liegt - bei maximal geladenem Gewicht? Ein **Auswahlproblem**: anders al
 Schwerpunktfenster an **zwei Zeitpunkten** gleichzeitig halten. Die Demo zeigt live **eine Instanz** mit drei
 Verfahren (**H_greedy**, ignoriert Balance; **H_balance**, schwerpunkt-bewusst; **CP-SAT**, das bewiesene
 Optimum, hier immer mitgerechnet - unter 2 s), und vorgerechnet die Messreihe über **80 Instanzen je Zelle**,
-die die Aussage trägt. Wie das Modell funktioniert, steht im Expander „Wie funktioniert diese Demo?" weiter
-unten, die formale Beschreibung im Expander „📐 Mathematische Formulierung".
+die die Aussage trägt. Wie das Modell funktioniert, steht im Expander „Wie funktioniert diese Demo?“ weiter
+unten, die formale Beschreibung im Expander „📐 Mathematische Formulierung“.
 """
 )
 
@@ -290,7 +290,7 @@ Zeitpunkt) - hätte einen Teil der Verletzungen durchgelassen.
 - Flugzeug- und Positionsdaten erfunden, nicht kalibriert; die Größenordnung orientiert sich grob an
   schmalen Verkehrsflugzeugen, ist aber kein Zitat einer echten Gewichts-und-Schwerpunkt-Tabelle.
 - Nur der Längs-Schwerpunkt (fore/aft); keine Seitenlage (links/rechts), die `stauplanung-demo` mit
-  „Seitenneigung" bereits hat - bewusst nicht übernommen, um die Abgrenzung klar zu halten.
+  „Seitenneigung“ bereits hat - bewusst nicht übernommen, um die Abgrenzung klar zu halten.
 - Positions-Gewichtsgrenzen sind unabhängig voneinander (reale Frachträume haben oft zusätzliche Grenzen
   für Positionsgruppen).
 - Treibstoff hat in der Basis denselben Hebelarm wie das Leergewicht (neutral).
