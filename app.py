@@ -73,6 +73,17 @@ unten, die formale Beschreibung im Expander „📐 Mathematische Formulierung�
 """
 )
 
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/uld-beladeplan-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Ein Frachtflugzeug hat feste Plätze im Laderaum, und es warten mehr Container als Plätze. Gesucht ist die schwerste Beladung, bei der der Schwerpunkt des Flugzeugs in einem schmalen erlaubten Bereich bleibt, und zwar bei vollem und bei leerem Tank. Die Demo vergleicht drei Verfahren. Eine einfache Regel setzt die schwersten Container nach vorn und muss danach Fracht wieder ausladen. Eine Ausgleichsregel verteilt jeden Container so, dass der Schwerpunkt nahe der Mitte bleibt. Ein exakter Löser liefert zum Vergleich die bewiesen beste Beladung. Sie sehen eine einzelne Ladung und daneben die Messreihe über viele zufällige Ladungen. Die Flugzeugdaten sind erfunden.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/uld-beladeplan-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
+
 st.caption("🎯 Schnellstart – ein Beispielszenario laden:")
 preset_names = list(C.PRESETS)
 for row in (preset_names[:3], preset_names[3:]):
@@ -301,6 +312,25 @@ Zeitpunkt) - hätte einen Teil der Verletzungen durchgelassen.
     )
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/uld-beladeplan-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind ein Flugzeug mit Leergewicht, Treibstoff und einem erlaubten Bereich für den Schwerpunkt, mehrere Laderaumplätze mit Hebelarm und Gewichtsgrenze sowie Container mit Gewicht. Gesucht ist, welche Container auf welchen Platz kommen, sodass das geladene Gewicht am größten ist und der Schwerpunkt bei vollem und bei leerem Tank im erlaubten Bereich liegt.
+
+| Symbol | Bedeutung |
+|---|---|
+| $x_{ij}$, $x_i$ | $x_{ij}$ ist 1, wenn Container $i$ auf Platz $j$ steht, sonst 0; $x_i = \sum_j x_{ij}$ zeigt an, ob Container $i$ mitfliegt |
+| $w_i$ | Gewicht des Containers $i$ |
+| $\mathrm{arm}_i$ | Hebelarm des Platzes, auf dem Container $i$ steht (Abstand vom Bezugspunkt in Längsrichtung) |
+| $W_0$, $M_0$ | Gewicht und Moment (Gewicht mal Hebelarm) des Flugzeugs ohne Fracht, einmal mit vollem und einmal mit leerem Tank |
+| $\mathrm{cg}$ | Schwerpunkt-Index: Gesamtmoment geteilt durch Gesamtgewicht |
+| $\mathrm{cg\_min}$, $\mathrm{cg\_max}$ | untere und obere Grenze des erlaubten Bereichs (Fenster) |
+| $\mathrm{cap}_j$ | Gewichtsgrenze des Platzes $j$ |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/uld-beladeplan-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Schwerpunkt-Index.** $\mathrm{cg}(W, M) = M / W$ (Gesamtmoment durch Gesamtgewicht).

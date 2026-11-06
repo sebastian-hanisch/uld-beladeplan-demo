@@ -61,7 +61,7 @@ def test_skeleton_and_footer():
     assert len(at.title) == 1 and at.title[0].value == "🛫 Beladeplan: welche ULDs, welche Position?"
     assert any(v.value.startswith("## 🛫 Welche ULDs kommen auf welche Position?") for v in at.markdown)
     assert any(v.value.startswith("### 📐 Was die Messreihe über 80 Instanzen") for v in at.markdown)
-    assert [e.label for e in at.expander] == ["🔧 Wie wir das erreichen – vollständiger Methodenvergleich",
+    assert [e.label for e in at.expander] == ["💬 In einfachen Worten", "🔧 Wie wir das erreichen – vollständiger Methodenvergleich",
                                                 "Wie funktioniert diese Demo?", "📐 Mathematische Formulierung"]
     assert any(c.value == FOOTER for c in at.caption)
     presets = [b.label for b in at.button if b.label in C.PRESETS]
