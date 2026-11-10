@@ -8,7 +8,7 @@ EINEM Zeitpunkt). Hier: welche ULDs kommen auf welche der 10 Laderaumpositionen,
 ihre Gewichtsgrenze überschreitet noch der Flugzeug-Schwerpunkt - an ZWEI Zeitpunkten, vollem UND leerem
 Tank - aus dem zulässigen Fenster läuft, bei maximal geladenem Gewicht? Live: eine Instanz mit drei
 Verfahren (H_greedy, H_balance, CP-SAT-Optimum). Vorgerechnet: die Messreihe über 80 Instanzen je Zelle
-(data/uldb_results.json), die die Aussage trägt.
+(data/uldb_results.json), die die Aussage belegt.
 
 Lauffähig mit: streamlit run app.py
 """
@@ -68,7 +68,7 @@ Fenster liegt - bei maximal geladenem Gewicht? Ein **Auswahlproblem**: anders al
 Schwerpunktfenster an **zwei Zeitpunkten** gleichzeitig halten. Die Demo zeigt live **eine Instanz** mit drei
 Verfahren (**H_greedy**, ignoriert Balance; **H_balance**, schwerpunkt-bewusst; **CP-SAT**, das bewiesene
 Optimum, hier immer mitgerechnet - unter 2 s), und vorgerechnet die Messreihe über **80 Instanzen je Zelle**,
-die die Aussage trägt. Wie das Modell funktioniert, steht im Expander „Wie funktioniert diese Demo?“ weiter
+die die Aussage belegt. Wie das Modell funktioniert, steht im Expander „Wie funktioniert diese Demo?“ weiter
 unten, die formale Beschreibung im Expander „📐 Mathematische Formulierung“.
 """
 )
@@ -128,7 +128,7 @@ st.markdown("## 🛫 Welche ULDs kommen auf welche Position?")
 st.caption(f"Live-Instanz (eine Instanz): Seed {seed}, {n_ulds} ULDs, Gewichtsniveau {C.LEVEL_LABEL[level]}, "
            f"Fensterbreite ±{fmt_num(width, 2)} m. Alle drei Verfahren laufen bei jeder Einstellung neu "
            "(CP-SAT unter 2 s, je Einstellung zwischengespeichert). Eine einzelne Instanz – die vorgerechnete "
-           "Messreihe unten trägt die Aussage.")
+           "Messreihe unten belegt die Aussage.")
 
 st.plotly_chart(V.loading_map_figure(live["ulds"], {"greedy": live["assign_greedy"], "balance": live["assign_balance"],
                                                       "exact": live["assign_exact"]},

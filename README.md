@@ -9,7 +9,7 @@ Zeitpunkt): welche ULDs kommen auf welche der 10 Laderaumpositionen eines Flugze
 überschreitet und der Flugzeug-**Schwerpunkt** sowohl mit **vollem** als auch mit **leerem** Tank im zulässigen Fenster liegt -
 bei maximal geladenem Gewicht? Die Demo zeigt live **eine Instanz** mit drei Verfahren (H_greedy, ignoriert Balance;
 H_balance, schwerpunkt-bewusst; CP-SAT, das bewiesene Optimum, hier immer mitgerechnet) und vorgerechnet die Messreihe über
-**80 Instanzen je Zelle** (45 Zellen), die die Aussage trägt.
+**80 Instanzen je Zelle** (45 Zellen), die die Aussage belegt.
 
 ## Warum dieses Problem
 
